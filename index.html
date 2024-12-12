@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="syle.css">
+  <title>Kieslect Training Team</title>
+  <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="image/k.jpg" />
+  <link rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="image/k.jpg" />
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="contect us.html">Contact us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+  <div class="logo">
+    <img src="image/k.jpg" alt="Blisbond Logo">
+    <h1>Embrace and lead the new world of smart wearable</h1>
+  </div>
+  
+  <div class="container">
+    <input type="text" id="search-bar" placeholder="Enter the website password"> <br>
+    <button onclick="searchTable()">GO</button>
+    <p id="no-result" style="color: red; display: none;">Please contact technical support</p>
+  
+    <!-- The table will be hidden initially -->
+    <table id="data-table" border="1" style="display: none;">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Enter</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Table data will go here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="java.js"></script>
+  <script>
+    function searchTable() {
+      // Get the entered password
+      const password = document.getElementById('search-bar').value;
+
+      // Define the correct password
+      const correctPassword = 'ACTOR@Kieslect2025'; // Replace 'yourpassword' with your actual password
+
+      // Get the table and the "no-result" message
+      const table = document.getElementById('data-table');
+      const noResultMessage = document.getElementById('no-result');
+
+      if (password === correctPassword) {
+        // Show the table if the password is correct
+        table.style.display = 'table';
+        noResultMessage.style.display = 'none'; // Hide error message if password is correct
+      } else {
+        // Show error message if the password is incorrect
+        noResultMessage.style.display = 'block';
+        table.style.display = 'none'; // Hide the table if the password is incorrect
+      }
+    }
+  </script>
+
+</body>
+</html>
